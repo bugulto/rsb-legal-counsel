@@ -22,14 +22,14 @@ function About() {
         </div>
       </section>
       <section className="bg-card py-24">
-        <div className="container-site grid gap-px border border-border bg-border md:grid-cols-2">
+        <div className="container-site"><div className="grid gap-px border border-border bg-border md:grid-cols-2">
           {[{ k: "Mission", v: mission }, { k: "Vision", v: vision }].map((x, i) => (
             <Reveal key={x.k} delay={i * 100} className="bg-card p-10 md:p-16">
               <p className="eyebrow">Our {x.k}</p>
               <p className="mt-6 font-serif text-3xl leading-snug text-primary">{x.v}</p>
             </Reveal>
           ))}
-        </div>
+        </div></div>
       </section>
       <section className="py-24 md:py-32">
         <div className="container-site grid gap-16 lg:grid-cols-2">
