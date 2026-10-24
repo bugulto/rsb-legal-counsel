@@ -22,7 +22,7 @@ function About() {
         </div>
       </section>
       <section className="bg-card py-24">
-        <div className="container-site grid gap-px bg-border md:grid-cols-2">
+        <div className="container-site grid gap-px border border-border bg-border md:grid-cols-2">
           {[{ k: "Mission", v: mission }, { k: "Vision", v: vision }].map((x, i) => (
             <Reveal key={x.k} delay={i * 100} className="bg-card p-10 md:p-16">
               <p className="eyebrow">Our {x.k}</p>

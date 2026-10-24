@@ -42,14 +42,14 @@ function Home() {
             <Link to="/about" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.14em] text-primary link-gold">About the firm <ArrowRight className="h-4 w-4" /></Link>
           </Reveal>
         </div>
-        <div className="container-site mt-20 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-5">
+        <div className="container-site mt-20"><div className="grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-5">
           {strengths.map((s, i) => (
             <Reveal key={s} delay={i * 80} className="bg-background p-8">
               <span className="font-serif text-3xl text-gold">0{i + 1}</span>
               <p className="mt-4 text-sm leading-relaxed">{s}</p>
             </Reveal>
           ))}
-        </div>
+        </div></div>
       </section>
 
       <section className="bg-card py-24 md:py-32">
