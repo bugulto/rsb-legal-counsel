@@ -171,7 +171,7 @@ export function SiteHeader() {
   );
 }
 
-export function SiteFooter() {
+export function SiteFooter({ onOpenDisclaimer }: { onOpenDisclaimer: () => void }) {
   return (
     <footer className="bg-navy-deep text-on-navy-muted">
       <div className="container-site grid gap-12 py-20 md:grid-cols-12">
@@ -246,9 +246,14 @@ export function SiteFooter() {
             © {new Date().getFullYear()} {firm.name}. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/disclaimer" className="hover:text-on-navy">
+            <button
+              type="button"
+              onClick={onOpenDisclaimer}
+              aria-haspopup="dialog"
+              className="cursor-pointer hover:text-on-navy"
+            >
               Legal Disclaimer
-            </Link>
+            </button>
             <Link to="/privacy" className="hover:text-on-navy">
               Privacy Policy
             </Link>

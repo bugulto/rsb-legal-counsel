@@ -196,6 +196,3 @@ export const consultation = [
     v: "Use the cancellation or rescheduling links in your Cal.com emails, when available, or contact the firm in advance by call or email.",
   },
 ];
-
-export const disclaimer =
-  "The content on this website is provided for general informational purposes only and does not constitute legal advice. Browsing the website or submitting an enquiry does not, by itself, establish an advocate–client relationship. Legal advice and representation are provided only upon acceptance of the matter and establishment of a professional engagement. All services remain subject to applicable laws and professional rules governing advocates in India.";

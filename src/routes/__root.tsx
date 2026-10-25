@@ -11,6 +11,8 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import { SiteHeader, SiteFooter } from "@/components/site/layout";
+import { LegalDisclaimer } from "@/components/site/legal-disclaimer";
+import { useDisclaimerConsent } from "@/hooks/use-disclaimer-consent";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
@@ -124,6 +126,7 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const disclaimer = useDisclaimerConsent();
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -135,10 +138,16 @@ function RootComponent() {
         Skip to content
       </a>
       <SiteHeader />
-      <main id="main">
+      <main id="main" tabIndex={-1}>
         <Outlet />
       </main>
-      <SiteFooter />
+      <SiteFooter onOpenDisclaimer={disclaimer.reopen} />
+      <LegalDisclaimer
+        open={disclaimer.open}
+        acknowledged={disclaimer.acknowledged}
+        onAcknowledge={disclaimer.acknowledge}
+        onClose={disclaimer.close}
+      />
     </QueryClientProvider>
   );
 }

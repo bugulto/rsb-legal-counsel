@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LegalPage } from "@/components/site/legal";
-import { disclaimer } from "@/lib/site";
+import { DisclaimerContent } from "@/components/site/disclaimer-content";
+import { disclaimerIntroduction } from "@/lib/disclaimer";
 import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/disclaimer")({
@@ -11,7 +12,8 @@ export const Route = createFileRoute("/disclaimer")({
     ),
   component: () => (
     <LegalPage title="Legal Disclaimer">
-      <p>{disclaimer}</p>
+      <p>{disclaimerIntroduction}</p>
+      <DisclaimerContent />
     </LegalPage>
   ),
 });
