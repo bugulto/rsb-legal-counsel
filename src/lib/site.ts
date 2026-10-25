@@ -2,6 +2,7 @@ import omkar from "@/assets/omkar.webp";
 import shashwat from "@/assets/shashwat.webp";
 import sheetal from "@/assets/sheetal.webp";
 import shashikala from "@/assets/shashikala.webp";
+import intern from "@/assets/intern.jpeg";
 
 export const firm = {
   name: "RSB Legal Associates & Consultants",
@@ -138,7 +139,7 @@ export const team = [
     slug: "abu-arham-shaikh",
     name: "Abu Arham Shaikh",
     role: "Intern",
-    photo: null as string | null,
+    photo: intern,
     bio: "Supports legal research, documentation and other assigned legal work under supervision.",
   },
 ];
