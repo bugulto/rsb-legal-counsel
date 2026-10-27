@@ -96,4 +96,15 @@ describe("Team photographs", () => {
     expect(member?.photo).toBeTruthy();
     expect(member?.bio).toContain("general litigation practice");
   });
+
+  it("includes Adv. Prabhakar Khopade next to Abhijit in team members list", () => {
+    const abhijitIndex = team.findIndex((m) => m.slug === "abhijit-takke");
+    const prabhakar = team[abhijitIndex + 1];
+    expect(prabhakar).toBeDefined();
+    expect(prabhakar.slug).toBe("prabhakar-khopade");
+    expect(prabhakar.name).toBe("Adv. Prabhakar Khopade");
+    expect(prabhakar.role).toBe("Advocate");
+    expect(prabhakar.photo).toBeTruthy();
+    expect(prabhakar.bio).toContain("civil land disputes");
+  });
 });

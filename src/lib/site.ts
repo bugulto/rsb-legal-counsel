@@ -2,6 +2,7 @@ import omkar from "@/assets/omkar.webp";
 import shashwat from "@/assets/shashwat.webp";
 import sheetal from "@/assets/sheetal.webp";
 import abhijit from "@/assets/abhijit.jpg";
+import prabhakar from "@/assets/prabhakar.jpg";
 import shashikala from "@/assets/shashikala.webp";
 import intern from "@/assets/intern.jpeg";
 
@@ -135,6 +136,13 @@ export const team = [
     role: "Advocate",
     photo: abhijit,
     bio: "Assists the firm in general litigation practice.",
+  },
+  {
+    slug: "prabhakar-khopade",
+    name: "Adv. Prabhakar Khopade",
+    role: "Advocate",
+    photo: prabhakar,
+    bio: "Focuses on general litigation, specialising in civil land disputes.",
   },
   {
     slug: "shashikala-kale",
