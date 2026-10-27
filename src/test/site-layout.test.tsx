@@ -11,6 +11,7 @@ import { fireEvent, render, screen, waitFor, within } from "@testing-library/rea
 import { describe, expect, it } from "vitest";
 
 import { SiteHeader, TeamPhoto } from "@/components/site/layout";
+import { team } from "@/lib/site";
 
 async function renderHeader() {
   const root = createRootRoute({
@@ -85,5 +86,14 @@ describe("Team photographs", () => {
       screen.getByRole("img", { name: "Photograph of Team member unavailable" }),
     ).toBeVisible();
     expect(screen.queryByAltText("Portrait of Team member")).not.toBeInTheDocument();
+  });
+
+  it("includes Adv. Abhijit Takke in team members list", () => {
+    const member = team.find((m) => m.slug === "abhijit-takke");
+    expect(member).toBeDefined();
+    expect(member?.name).toBe("Adv. Abhijit Takke");
+    expect(member?.role).toBe("Advocate");
+    expect(member?.photo).toBeTruthy();
+    expect(member?.bio).toContain("general litigation practice");
   });
 });

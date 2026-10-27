@@ -1,6 +1,7 @@
 import omkar from "@/assets/omkar.webp";
 import shashwat from "@/assets/shashwat.webp";
 import sheetal from "@/assets/sheetal.webp";
+import abhijit from "@/assets/abhijit.jpg";
 import shashikala from "@/assets/shashikala.webp";
 import intern from "@/assets/intern.jpeg";
 
@@ -127,6 +128,13 @@ export const team = [
     role: "Co-Founder – Associate",
     photo: sheetal,
     bio: "Contributes to legal drafting, case preparation, procedural coordination and client matters across the firm's practice areas.",
+  },
+  {
+    slug: "abhijit-takke",
+    name: "Adv. Abhijit Takke",
+    role: "Advocate",
+    photo: abhijit,
+    bio: "Assists the firm in general litigation practice.",
   },
   {
     slug: "shashikala-kale",
