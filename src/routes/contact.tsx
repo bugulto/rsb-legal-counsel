@@ -34,12 +34,12 @@ function Contact() {
               {c.href ? (
                 <a
                   href={c.href}
-                  className="link-gold mt-3 inline-block break-all font-serif text-2xl text-primary"
+                  className="link-gold mt-3 inline-block break-all font-sans text-2xl text-primary"
                 >
                   {c.v}
                 </a>
               ) : (
-                <p className="mt-3 font-serif text-2xl text-primary">{c.v}</p>
+                <p className="mt-3 font-sans text-2xl text-primary">{c.v}</p>
               )}
             </Reveal>
           ))}

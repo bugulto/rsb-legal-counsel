@@ -101,7 +101,7 @@ function Home() {
         <div className="container-site">
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
             <Reveal>
-              <SectionTitle eyebrow="Practice Areas" title="Seven areas of practice." />
+              <SectionTitle eyebrow="Practice Areas" title="Areas of legal service." />
             </Reveal>
             <Link to="/practice-areas" className="btn-outline self-start text-primary md:self-auto">
               View all
