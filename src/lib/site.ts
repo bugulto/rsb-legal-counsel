@@ -11,7 +11,7 @@ export const firm = {
   tagline: "Equity, Fairness, Justice.",
   established: 2023,
   phone: "+91 87501 17205",
-  phoneHref: "tel:+918750117205",
+  phoneHref: "tel:+91 87501 17205",
   email: "rsblegal.associates@gmail.com",
   hours: "Monday to Saturday, 10:30 a.m. – 7:30 p.m. (IST)",
 };

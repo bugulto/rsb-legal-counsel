@@ -53,8 +53,7 @@ describe("Consultation booking", () => {
   it("keeps provider initialization out of SSR and exposes both direct booking links", () => {
     const html = renderToString(<AppointmentBooking />);
     expect(html).not.toContain("<iframe");
-    expect(html).toContain("https://cal.com/labrat-pkwb0d/online-legal-consultation");
-    expect(html).toContain("https://cal.com/labrat-pkwb0d/in-person-legal-consultation");
+    expect(html).toContain("https://cal.com/rsb-legal-associates-and-consultants/30min");
     expect(provider.getApi).not.toHaveBeenCalled();
   });
 
@@ -62,11 +61,11 @@ describe("Consultation booking", () => {
     render(<AppointmentBooking />);
     expect(await calendar("Online Legal Consultation")).toHaveAttribute(
       "data-cal-link",
-      "labrat-pkwb0d/online-legal-consultation",
+      "rsb-legal-associates-and-consultants/30min",
     );
     expect(
       screen.getByRole("link", { name: /Open on Cal.com for Online Legal Consultation/ }),
-    ).toHaveAttribute("href", "https://cal.com/labrat-pkwb0d/online-legal-consultation");
+    ).toHaveAttribute("href", "https://cal.com/rsb-legal-associates-and-consultants/30min");
 
     fireEvent.mouseDown(screen.getByRole("tab", { name: /^In-Person Legal Consultation/ }), {
       button: 0,
@@ -74,14 +73,14 @@ describe("Consultation booking", () => {
     });
     expect(await calendar("In-Person Legal Consultation")).toHaveAttribute(
       "data-cal-link",
-      "labrat-pkwb0d/in-person-legal-consultation",
+      "rsb-legal-associates-and-consultants/30min",
     );
     expect(
       screen.queryByTitle("Online Legal Consultation booking calendar"),
     ).not.toBeInTheDocument();
     expect(
       screen.getByRole("link", { name: /Open on Cal.com for In-Person Legal Consultation/ }),
-    ).toHaveAttribute("href", "https://cal.com/labrat-pkwb0d/in-person-legal-consultation");
+    ).toHaveAttribute("href", "https://cal.com/rsb-legal-associates-and-consultants/30min");
 
     fireEvent.mouseDown(screen.getByRole("tab", { name: /^Online Legal Consultation/ }), {
       button: 0,
