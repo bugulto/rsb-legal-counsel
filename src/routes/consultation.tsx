@@ -39,7 +39,7 @@ function Consultation() {
             Choose your consultation.
           </h2>
           <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">
-            Both consultation options are 30 minutes. Availability and time zones are shown in the
+            Both consultation options are 1 hour. Availability and time zones are shown in the
             calendar. Please provide only the details needed to arrange your appointment; avoid
             sharing sensitive case information.
           </p>
