@@ -12,8 +12,8 @@ export const appointmentTypes = [
     title: "In-Person Legal Consultation",
     description: "Physical consultation at the firm's Mumbai office",
     duration: "1 hour",
-    calLink: "rsb-legal-associates-and-consultants/1 hour-meeting",
-    url: "https://cal.com/rsb-legal-associates-and-consultants/1-hour-meeting",
+    calLink: "https://cal.com/rsb-legal-associates-and-consultants/30min",
+    url: "https://cal.com/rsb-legal-associates-and-consultants/30min",
   },
 ] as const;
 
