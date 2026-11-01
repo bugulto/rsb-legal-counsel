@@ -5,7 +5,7 @@ export const appointmentTypes = [
     description: "Video consultation",
     duration: "1 hour",
     calLink: "rsb-legal-associates-and-consultants/30min",
-    url: "https://cal.com/rsb-legal-associates-and-consultants/30min",
+    url: "https://cal.com/rsb-legal-associates-and-consultants/1-hour-meeting",
   },
   {
     id: "in-person",
@@ -13,7 +13,7 @@ export const appointmentTypes = [
     description: "Physical consultation at the firm's Mumbai office",
     duration: "1 hour",
     calLink: "rsb-legal-associates-and-consultants/30min",
-    url: "https://cal.com/rsb-legal-associates-and-consultants/30min",
+    url: "https://cal.com/rsb-legal-associates-and-consultants/1-hour-meeting",
   },
 ] as const;
 
